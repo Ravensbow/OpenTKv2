@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTKv2", "OpenTKv2\OpenTKv2.csproj", "{069EF50A-469C-462A-A0EC-1017CEE1A562}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{069EF50A-469C-462A-A0EC-1017CEE1A562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069EF50A-469C-462A-A0EC-1017CEE1A562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069EF50A-469C-462A-A0EC-1017CEE1A562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069EF50A-469C-462A-A0EC-1017CEE1A562}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53AC4758-688A-4FC5-AEC4-B1E73784094C}
+	EndGlobalSection
+EndGlobal
