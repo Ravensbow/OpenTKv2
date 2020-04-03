@@ -15,12 +15,16 @@ namespace OpenTK
     {
         private Shader _shader;
         private Obiekt squer = new Obiekt();
+        private Dictionary<Key,double> keyTimers=new Dictionary<Key, double>();
 
         public Game(int width, int height, string title) : base(width, height, GraphicsMode.Default, title) { }
 
         protected override void OnLoad(EventArgs e)
         {
             GL.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
+            GL.Enable(EnableCap.DepthTest);
+
             _shader = new Shader("Common/shader.vert", "Common/shader.frag");
             _shader.Use();
             //Code:
@@ -51,7 +55,16 @@ namespace OpenTK
             {
                 Exit();
             }
-
+            if ((input.IsKeyDown(Key.P)&&!keyTimers.ContainsKey(Key.P))||(input.IsKeyDown(Key.P)&&keyTimers[Key.P]>0.2))
+            {
+                if (keyTimers.ContainsKey(Key.P))
+                    keyTimers[Key.P] = 0;
+                else
+                    keyTimers.Add(Key.P, 0);
+                OpenTKv2.Common.View.togglePerspective();
+            }
+            if (keyTimers.ContainsKey(Key.P))
+                keyTimers[Key.P] += e.Time;
             base.OnUpdateFrame(e);
         }
 

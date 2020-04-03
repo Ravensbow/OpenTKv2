@@ -127,6 +127,8 @@ namespace OpenTKv2.Common
         }
         public void Render(Shader shader)
         {
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+
             GL.BindVertexArray(_vertexArrayObject);
             // Note: The matrices we'll use for transformations are all 4x4.
 
@@ -134,6 +136,7 @@ namespace OpenTKv2.Common
             var transform = Matrix4.Identity;
 
             rotY = (rotY >= 360) ? 0f : (rotY + 0.2f);
+            rotX = (rotX >= 360) ? 0f : (rotX + 0.2f);
 
             transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(rotX));
             transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(rotY));
@@ -148,6 +151,8 @@ namespace OpenTKv2.Common
             // Now that the matrix is finished, pass it to the vertex shader.
             // Go over to shader.vert to see how we finally apply this to the vertices
             shader.SetMatrix4("transform", transform);
+            shader.SetMatrix4("view", View.view);
+            shader.SetMatrix4("perspecive", View.getPerspective());
 
             GL.DrawArrays(PrimitiveType.Triangles, 0, 36);
         }

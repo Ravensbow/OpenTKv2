@@ -10,7 +10,7 @@ namespace OpenTK
     {
         static void Main(string[] args)
         {
-            using (Game game = new Game(800, 600, "Tutek"))
+            using (Game game = new Game(OpenTKv2.Common.View.Width, OpenTKv2.Common.View.Height, "Tutek"))
             {
                 game.Run(60);
             }

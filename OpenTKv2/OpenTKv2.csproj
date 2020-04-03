@@ -50,6 +50,7 @@
     <Compile Include="Common\Obiekt.cs" />
     <Compile Include="Common\Shader.cs" />
     <Compile Include="Common\Texture.cs" />
+    <Compile Include="Common\View.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
