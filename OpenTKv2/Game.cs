@@ -14,7 +14,9 @@ namespace OpenTK
     class Game : GameWindow
     {
         private Shader _shader;
-        private Obiekt squer = new Obiekt();
+
+        private Obiekt squer = new Obiekt("Resources/dragon.obj");
+        
         private Dictionary<Key,double> keyTimers=new Dictionary<Key, double>();
 
         public Game(int width, int height, string title) : base(width, height, GraphicsMode.Default, title) { }
