@@ -21,7 +21,7 @@ void main()
     vec3 diffuse = brightness * lightColor;
     
     vec4 sceneColor = vec4(diffuse,0.0)*(texture(texture0, texCoord)/texture(texture0, texCoord));
-    vec4 addColor = texture(texture1, texCoord)*0;
+    vec4 addColor = texture(texture1, texCoord);
     
     FragColor = addColor*addColor.a + sceneColor*(1-addColor.a);
     //FragColor = mix(sceneColor,addColor,0.0);

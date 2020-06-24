@@ -142,7 +142,7 @@ namespace OpenTKv2.Common
             rotY = (rotY >= 360) ? 0f : (rotY + 0.2f);
             rotX = (rotX >= 360) ? 0f : (rotX + 0.2f);
 
-            transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(rotX));
+            transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(rotX));
             transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(rotY));
             transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(rotZ));
             transform *= Matrix4.CreateScale(0.2f);
